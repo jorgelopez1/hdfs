@@ -111,48 +111,7 @@
         }
       }
     },
-    "journal_node": {
-      "description":"HDFS configuration properties.",
-      "type": "object",
-      "properties": {
-        "cpus": {
-          "description": "Journal node CPU requirement",
-          "type": "number",
-          "default": 0.3
-        },
-        "mem": {
-          "description": "Journal node memory requirement",
-          "type": "number",
-          "default": 2048
-        },
-        "disk": {
-          "description": "Journal node disk size requirement in MB",
-          "type": "number",
-          "default": 5000
-        },
-        "disk_type": {
-          "description": "Journal node disk type",
-          "type": "string",
-          "default": "ROOT"
-        },
-        "enable_readiness_check": {
-          "description": "Determines whether to enable readiness checks for Journal Nodes.",
-          "type": "boolean",
-          "default": true
-        },
-        "lagging_tx_count": {
-          "description": "The number of transactions that this JournalNode is lagging",
-          "type": "integer",
-          "default": 0
-        }
-      },
-      "required": [
-        "cpus",
-        "mem",
-        "disk",
-        "disk_type"
-      ]
-    },
+    
     "name_node": {
       "description": "HDFS configuration properties.",
       "type": "object",
@@ -185,26 +144,7 @@
         "disk_type"
       ]
     },
-    "zkfc_node": {
-      "description":"HDFS configuration properties.",
-      "type": "object",
-      "properties": {
-        "cpus": {
-          "description": "ZKFC node CPU requirement",
-          "type": "number",
-          "default": 0.3
-        },
-        "mem": {
-          "description": "ZKFC node memory requirement",
-          "type": "number",
-          "default": 2048
-        }
-      },
-      "required": [
-        "cpus",
-        "mem"
-      ]
-    },
+    
     "data_node":{
       "description":"HDFS configuration properties.",
       "type":"object",
@@ -212,7 +152,7 @@
         "count":{
           "description":"Data node count requirement",
           "type":"number",
-          "default": 3
+          "default": 1
         },
         "cpus":{
           "description":"Data node CPU requirement",
@@ -341,9 +281,7 @@
         "name_node_rpc_port",
         "name_node_http_port",
         "name_node_https_port",
-        "journal_node_rpc_port",
-        "journal_node_http_port",
-        "journal_node_https_port",
+        
         "data_node_rpc_port",
         "data_node_http_port",
         "data_node_https_port",
